@@ -19,12 +19,12 @@ namespace PoseClipboard
 
         public override void OnInspectorGUI()
         {
-            if (GUILayout.Button("Copy"))
+            if (GUILayout.Button("Copy Pose"))
             {
                 Copy();
             }
             
-            if (GUILayout.Button("Paste"))
+            if (GUILayout.Button("Paste Pose"))
             {
                 Paste();
             }
