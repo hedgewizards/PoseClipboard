@@ -54,7 +54,7 @@ namespace PoseClipboard
             for (int n = 0; n < targetTransform.childCount; n++)
             {
                 Transform child = targetTransform.GetChild(n);
-                if (self.IgnoreTransforms.Contains(child))
+                if (!self.IgnoreTransforms.Contains(child))
                 {
                     children.Add(transformToNode(child));
                 }
