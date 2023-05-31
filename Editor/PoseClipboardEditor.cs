@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Newtonsoft.Json;
 
 namespace PoseClipboard
 {
@@ -33,12 +34,12 @@ namespace PoseClipboard
 
         public void Copy()
         {
-            GUIUtility.systemCopyBuffer = JsonUtility.ToJson(GetNodeData());
+            GUIUtility.systemCopyBuffer = JsonConvert.SerializeObject(GetNodeData());
         }
 
         public void Paste()
         {
-            PoseNodeData nodeData = JsonUtility.FromJson<PoseNodeData>(GUIUtility.systemCopyBuffer);
+            PoseNodeData nodeData = JsonConvert.DeserializeObject<PoseNodeData>(GUIUtility.systemCopyBuffer);
             SetNodeData(nodeData);
         }
 
@@ -62,7 +63,7 @@ namespace PoseClipboard
             return new PoseNodeData()
             {
                 localPosition = targetTransform.localPosition,
-                localRotation = targetTransform.localRotation,
+                localRotation = targetTransform.eulerAngles,
                 localScale = targetTransform.localScale,
                 children = children.ToArray()
             };
@@ -82,7 +83,7 @@ namespace PoseClipboard
 
             targetTransform.localPosition = data.localPosition;
             targetTransform.localScale = data.localScale;
-            targetTransform.localRotation = data.localRotation;
+            targetTransform.eulerAngles = data.localRotation;
 
             for (int n = 0; n < targetTransform.childCount; n++)
             {
