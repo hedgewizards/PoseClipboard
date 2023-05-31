@@ -1,0 +1,16 @@
+{
+    "name": "com.hedgewizards.poseclipboard.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:becec167ccb7bab4ba2b149c1a4599b7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
