@@ -16,4 +16,4 @@ https://github.com/hedgewizards/PoseClipboard.git
 
 Attach Pose Clipboard component to the root of your armature. click "Copy Pose" to put the pose into your clipboard. click "Paste Pose" to apply the pose from your clipboard.
 
-only the transform's LocalPosition, LocalScale, and LocalRotation are replicated.
+only the transform's LocalPosition, LocalScale, and LocalRotation are replicated, and it is dependent on the order.
