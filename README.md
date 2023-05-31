@@ -9,6 +9,7 @@ Unfortunately Unity's default serializer JsonUtility doesn't like to serailize d
 In unity, go to Window -> Package Manage -> Plus -> Add Package from Git URL and paste in:
 
 https://github.com/hedgewizards/PoseClipboard.git
+
 ![Unity_g9vI622p2o](https://github.com/hedgewizards/PoseClipboard/assets/105096969/ae6318c4-39a7-41ba-a1c5-7afcb97f9810)
 
 # To use
