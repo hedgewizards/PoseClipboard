@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace PoseClipboard
 {
-    internal class FlatVector3Converter : JsonConverter<Vector3>
+    public class FlatVector3Converter : JsonConverter<Vector3>
     {
         public override Vector3 ReadJson(JsonReader reader, Type objectType, Vector3 existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
